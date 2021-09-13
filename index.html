@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sttyle.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <section class="navbar" id="home" >
+        <div class="bars" onClick="navigate()"><i class="fa fa-bars"></i></div>
+        <div class="nav_logo"><i class="fa fa-plane"></i></div>
+        <div class="nav_links">
+            <a href="#home">Home</a>
+            <a href="#book_now">Book</a>
+            <a href="#package">Package</a>
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact_us">Contact</a>
+        </div>
+
+        <div class="search_icon" onClick="showSearch()"><i class="fa fa-search"></i></div>
+
+        <div class="search_here hidden" id="search_here">
+            <input type="text" placeholder="Search here . . . ">
+            <button><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="login_icon" onClick="showLogin()"><i class="fa fa-user"></i></div>
+
+
+        <div class="nav_links_toggle" id="navLinksNav">
+            <button class="navClose" onClick="navigClose()">X</button>
+            <a href="#home" onClick="navigClose()">Home</a>
+            <a href="#book_now" onClick="navigClose()">Book</a>
+            <a href="#package" onClick="navigClose()">Package</a>
+            <a href="#services" onClick="navigClose()">Services</a>
+            <a href="#gallery" onClick="navigClose()">Gallery</a>
+            <a href="#contact_us" onClick="navigClose()">Contact</a>
+        </div>
+
+        <div class="login_form hiddenLog" id="login_form">
+
+          
+            <form>
+                <h1>Login here</h1>
+                <button id="closeBtn" onClick="hideLogin()">X</button>
+                <input type="text" placeholder="username or email">
+                <input type="password" placeholder="your password">
+
+                <button class="submit">Login</button>
+            </form>
+        </div>
+    </section>
+    
+    <div class="home_heading">
+        <h2>ADVENTURE IS WORTHWHILE</h2>
+        <button id="explore">Explore now</button>
+    </div>
+
+    <div class="video_container">
+        <video src="vid-1.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+
+
+
+    <section id="book_now">
+        <div class="book_heading" data-aos="fade-up">BOOK NOW</div>
+        <div class="book_body">
+            <div class="book_left" data-aos="fade-right">
+                <img src="book.png">
+            </div>
+            <div class="book_right" data-aos="fade-left">
+                <form>
+                    <input type="text" class="non_label" id="top_inp" placeholder="Place name" >
+                    
+                    <input type="text" class="non_label" placeholder="number of guest" >
+
+                    <label for="arrival">Arriving Date</label>
+                    <input type="date"  class="with_label" name="arrival">
+
+                    <label for="leave">Leaving Date</label>
+                    <input type="date" class="with_label"  name="leave">
+
+                    <button id="book_here">Book now</button>
+
+                    
+                   
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="package">
+        <div class="package_heading" data-aos="fade-up">PACKAGES</div>
+        <div class="package_main">
+
+
+
+            <div class="package_card" data-aos="zoom-out">
+                <div class="package_photo"><img src="https://source.unsplash.com/300x160/?indonesia" alt="PHOTO"></div>
+                <div class="location_package">
+                    <div class="location_icon"><i class="fa fa-map-marker"></i></div>
+                    <div class="location_name">Mumbai</div>
+                </div>
+                <div class="package_para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita velit enim nemo amet qui sapiente quaerat quasi magni alias quisquam.</div>
+                <div class="package_rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <div class="package_rate">
+                    <div class="new_rate">$90.00</div>
+                    <div class="old_rate">$120.00</div>
+                </div>
+                <div class="package_btn">
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+
+
+            
+            <div class="package_card" data-aos="zoom-out">
+                <div class="package_photo"><img src="https://source.unsplash.com/300x160/?colombia" alt="PHOTO"></div>
+                <div class="location_package">
+                    <div class="location_icon"><i class="fa fa-map-marker"></i></div>
+                    <div class="location_name">paris</div>
+                </div>
+                <div class="package_para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita velit enim nemo amet qui sapiente quaerat quasi magni alias quisquam.</div>
+                <div class="package_rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <div class="package_rate">
+                    <div class="new_rate">$90.00</div>
+                    <div class="old_rate">$120.00</div>
+                </div>
+                <div class="package_btn">
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+
+
+            
+            <div class="package_card" data-aos="zoom-out">
+                <div class="package_photo"><img src="https://source.unsplash.com/300x160/?vanice" alt="PHOTO"></div>
+                <div class="location_package">
+                    <div class="location_icon"><i class="fa fa-map-marker"></i></div>
+                    <div class="location_name">new york</div>
+                </div>
+                <div class="package_para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita velit enim nemo amet qui sapiente quaerat quasi magni alias quisquam.</div>
+                <div class="package_rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <div class="package_rate">
+                    <div class="new_rate">$90.00</div>
+                    <div class="old_rate">$120.00</div>
+                </div>
+                <div class="package_btn">
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+
+
+            
+            <div class="package_card" data-aos="zoom-out">
+                <div class="package_photo"><img src="https://source.unsplash.com/300x160/?europe" alt="PHOTO"></div>
+                <div class="location_package">
+                    <div class="location_icon"><i class="fa fa-map-marker"></i></div>
+                    <div class="location_name">vanice</div>
+                </div>
+                <div class="package_para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita velit enim nemo amet qui sapiente quaerat quasi magni alias quisquam.</div>
+                <div class="package_rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <div class="package_rate">
+                    <div class="new_rate">$90.00</div>
+                    <div class="old_rate">$120.00</div>
+                </div>
+                <div class="package_btn">
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+
+            
+            <div class="package_card" data-aos="zoom-out">
+                <div class="package_photo"><img src="https://source.unsplash.com/300x160/?china" alt="PHOTO"></div>
+                <div class="location_package">
+                    <div class="location_icon"><i class="fa fa-map-marker"></i></div>
+                    <div class="location_name">colombia</div>
+                </div>
+                <div class="package_para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita velit enim nemo amet qui sapiente quaerat quasi magni alias quisquam.</div>
+                <div class="package_rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <div class="package_rate">
+                    <div class="new_rate">$90.00</div>
+                    <div class="old_rate">$120.00</div>
+                </div>
+                <div class="package_btn">
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+
+
+            
+            <div class="package_card" data-aos="zoom-out">
+                <div class="package_photo"><img src="https://source.unsplash.com/300x160/?hotels" alt="PHOTO"></div>
+                <div class="location_package">
+                    <div class="location_icon"><i class="fa fa-map-marker"></i></div>
+                    <div class="location_name">australia</div>
+                </div>
+                <div class="package_para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita velit enim nemo amet qui sapiente quaerat quasi magni alias quisquam.</div>
+                <div class="package_rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <div class="package_rate">
+                    <div class="new_rate">$90.00</div>
+                    <div class="old_rate">$120.00</div>
+                </div>
+                <div class="package_btn">
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+
+
+    <!-- section services is the replication of section packages with some modification.................. -->
+    <section id="services">
+        <div class="package_heading">SERVICES</div>
+        <div class="package_main">
+
+
+
+            <div class="service_card" data-aos="zoom-in">
+                    <div class="service_icon">	
+                        <i class="fa fa-home"></i></div>
+                    <div class="service_heading">Affordable Hotels</div>
+                
+                <div class="services_para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita velit enim nemo amet qui sapiente quaerat quasi magni alias quisquaml Lorem, ipsum  </div>
+                
+            </div>
+
+
+            <div class="service_card" data-aos="zoom-in">
+                <div class="service_icon"><i class="fa fa-cutlery"></i></div>
+                <div class="service_heading">Food and Drinks</div>
+            
+            <div class="services_para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita velit enim nemo amet qui sapiente quaerat quasi magni alias quisquaml Lorem, ipsum  </div>
+            
+        </div>
+
+
+        <div class="service_card" data-aos="zoom-in">
+            <div class="service_icon"><i class="fa fa-volume-up"></i></div>
+            <div class="service_heading">Safety guide</div>
+        
+        <div class="services_para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita velit enim nemo amet qui sapiente quaerat quasi magni alias quisquaml Lorem, ipsum  </div>
+        
+    </div>
+
+
+
+    <div class="service_card" data-aos="zoom-in">
+        <div class="service_icon"><i class="fa fa-globe"></i></div>
+        <div class="service_heading">Around the world</div>
+    
+    <div class="services_para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita velit enim nemo amet qui sapiente quaerat quasi magni alias quisquaml Lorem, ipsum  </div>
+    
+</div>
+
+
+
+<div class="service_card" data-aos="zoom-in">
+    <div class="service_icon"><i class="fa fa-fighter-jet"></i></div>
+    <div class="service_heading">Fastest Travel</div>
+
+<div class="services_para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita velit enim nemo amet qui sapiente quaerat quasi magni alias quisquaml Lorem, ipsum  </div>
+
+</div>
+
+
+
+
+<div class="service_card" data-aos="zoom-in">
+    <div class="service_icon">	
+        <i class="fa fa-road"></i></div>
+    <div class="service_heading">Adventures</div>
+
+<div class="services_para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita velit enim nemo amet qui sapiente quaerat quasi magni alias quisquaml Lorem, ipsum  </div>
+
+</div>
+
+
+
+            
+          
+
+
+
+ </div>
+ </section>
+
+
+
+
+ <!-- gallery section is the replica of the services section with some modification -->
+ <section id="gallery">
+    <div class="package_heading">Gallery</div>
+    <div class="package_main">
+
+
+
+        <div class="gallery_card" data-aos="fade-up">
+               
+            <img src="https://source.unsplash.com/350x300/?mumbai" alt="PHOTO">
+        </div>
+
+
+        <div class="gallery_card" data-aos="fade-up">
+               
+            <img src="https://source.unsplash.com/350x300/?paris" alt="PHOTO">
+        </div>
+
+
+        <div class="gallery_card" data-aos="fade-up">
+               
+            <img src="https://source.unsplash.com/350x300/?america" alt="PHOTO">
+        </div>
+
+
+
+        <div class="gallery_card" data-aos="fade-up">
+               
+            <img src="https://source.unsplash.com/350x300/?london" alt="PHOTO">
+        </div>
+
+
+
+        <div class="gallery_card" data-aos="fade-up">
+               
+            <img src="https://source.unsplash.com/350x300/?japan" alt="PHOTO">
+        </div>
+
+
+
+        <div class="gallery_card" data-aos="fade-up">
+               
+            <img src="https://source.unsplash.com/350x300/?korea" alt="PHOTO">
+        </div>
+
+
+
+        <div class="gallery_card" data-aos="fade-up">
+               
+            <img src="https://source.unsplash.com/350x300/?africa" alt="PHOTO">
+        </div>
+
+
+
+        <div class="gallery_card" data-aos="fade-up">
+               
+            <img src="https://source.unsplash.com/350x300/?asia" alt="PHOTO">
+        </div>
+
+
+
+        <div class="gallery_card" data-aos="fade-up">
+               
+            <img src="https://source.unsplash.com/350x300/?canada" alt="PHOTO">
+        </div>
+
+
+
+</div>
+</section>
+
+
+
+
+
+<section id="contact_us">
+    <div class="book_heading">Contact Us</div>
+    <div class="book_body">
+        <div class="book_left" data-aos="fade-right">
+            <img src="globe.png">
+        </div>
+        <div class="book_right" data-aos="fade-left">
+            <form>
+                <input type="text" class="non_label" id="top_inp" placeholder="your name" >
+                
+                <input type="text" class="non_label" placeholder="your email" >
+                <input type="text" class="non_label" placeholder="subject" >
+
+                <textarea  class="text_area" placeholder="enter a message..." ></textarea>
+               
+
+                <button id="book_here">Send</button>
+
+                
+               
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="footer">Created by Nikhil Bhatt || all rights reserved</section>
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+<script>
+    AOS.init();
+  </script>
+</body>
+</html>
