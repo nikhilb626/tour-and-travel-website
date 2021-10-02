@@ -7,10 +7,12 @@
 body{
     overflow-x: hidden;
     scroll-behavior:auto;
+    background: rgb(216, 216, 216);
+
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 0px;
   }
 
 .navbar{
@@ -214,12 +216,8 @@ background: -moz-linear-gradient(357deg,#607ad6 0%, #8cdbcc 80%);
 
 
 .video_container{
-    position: absolute;
-    top: 45px;
-    left: 0;
-    right: 0;
     width: 100vw;
-    height: 94vh;
+    height: 100vh;
 }
 
 .video_container video{
@@ -258,8 +256,6 @@ background: -moz-linear-gradient(357deg,#607ad6 0%, #8cdbcc 80%);
 #book_now{
     z-index:1;
     width: 100vw;
-    position: absolute;
-    top: 579px;
     background: rgb(216, 216, 216);
 }
 
@@ -414,13 +410,11 @@ width: 50%;
 /* ............package section........... */
 
 #package{
-    position: absolute;
     width: 100vw;
     height: fit-content;
     z-index: 1;
   
-    top: 1230px;
-    
+
     background: rgb(216, 216, 216);
 
 
@@ -542,12 +536,10 @@ transition: 0.5s;
 
 
 #services{
-    position: absolute;
     width: 100vw;
     height: fit-content;
     z-index: 1;
   
-    top: 2178px;
     
     background: rgb(216, 216, 216);
 }
@@ -579,12 +571,10 @@ transition: 0.5s;
 }
 
 #gallery{
-    position: absolute;
     width: 100vw;
     height: fit-content;
     z-index: 1;
   
-    top: 2946px;
     
     background: rgb(216, 216, 216); 
 }
@@ -620,8 +610,6 @@ transition: 0.5s;
 #contact_us{
     z-index:1;
     width: 100vw;
-    position: absolute;
-    top: 3964px;
     background: rgb(216, 216, 216);
 }
 
@@ -636,8 +624,6 @@ transition: 0.5s;
 #footer{
     z-index:1;
     width: 100vw;
-    position: absolute;
-    top: 4599px;
     background: rgb(55, 55, 55);
     color: white;
     height: 40px;
@@ -684,24 +670,6 @@ transition: 0.5s;
         width: 100vw;
     } 
 
-    #package{
-        top: 1690px;
-    }
-
-    #services{
-        top: 4350px;
-    }
-
-    #gallery{
-        top: 6478px;
-    }
-    #contact_us{
-
-        top: 9356px;
-    }
-    #footer{
-        top: 10470px;
-    }
 
 
 }
